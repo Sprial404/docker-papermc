@@ -1,0 +1,11 @@
+version: '3'
+services:
+  papermc:
+    image: amazoncorretto:17-alpine-jdk
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./data:/data
+    ports:
+      - 25565:25565
